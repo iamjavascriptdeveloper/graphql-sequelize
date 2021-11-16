@@ -1,0 +1,11 @@
+# Types
+type Plan implements PlanId{
+    # Customer Name
+    ConstructionName: String
+
+    #Interface Required
+    ConstructionCode: String!
+    PlanNo: String!
+
+    BasicSpecification: BasicSpecification
+}

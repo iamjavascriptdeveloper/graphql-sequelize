@@ -1,0 +1,1 @@
+export { default as basicSpecificationQueries } from './queries';

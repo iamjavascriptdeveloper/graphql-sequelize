@@ -1,0 +1,5 @@
+# Types
+interface PlanId {
+    ConstructionCode: String!
+    PlanNo: String!
+}

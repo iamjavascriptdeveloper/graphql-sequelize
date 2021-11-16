@@ -1,0 +1,11 @@
+# Types 
+type BasicSpecification {
+    Id: ID!
+    JapaneseName: String!
+    EnglishName: String!
+
+    BasicSpecificationValues: [BasicSpecificationValue]
+    BasicSpecificationCategory: BasicSpecificationCategory
+
+}
+

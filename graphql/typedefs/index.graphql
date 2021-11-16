@@ -1,0 +1,12 @@
+# Custom Scalar
+scalar Date
+
+type Query{
+
+    # Plan
+    plan( ConstructionCode: String, PlanNo: String ): Plan
+    plans:[Plan]
+
+    BasicSpecification: BasicSpecification
+    BasicSpecifications: [BasicSpecification]
+}

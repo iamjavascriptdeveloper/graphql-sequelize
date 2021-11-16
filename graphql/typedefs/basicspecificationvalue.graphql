@@ -1,0 +1,9 @@
+# Types
+type BasicSpecificationValue {
+    BasicSpecificationId: ID!
+    ValueId: ID!
+    JapaneseValue: String!
+    EnglishValue: String!
+
+}
+

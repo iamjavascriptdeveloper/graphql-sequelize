@@ -1,0 +1,7 @@
+# Types
+type BasicSpecificationCategory {
+    Id: ID!
+    JapaneseName: String!
+    EnglishName: String!
+
+}
