@@ -14,8 +14,6 @@ const planQueries = {
       ]
     })
 
-    console.log( basicSpecification )
-
     return basicSpecification 
   },
 

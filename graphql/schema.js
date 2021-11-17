@@ -13,8 +13,6 @@ gqlFiles.forEach((file) => {
   });
 });
 
-console.log( typeDefs )
-
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers

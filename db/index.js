@@ -19,27 +19,6 @@ const connectDB = async (ConstructionCode, PlanNo) => {
 
 }
 
-const sequelizeShiyousho = new Sequelize({
-    dialect: 'sqlite',
-    storage: './db/Shiyousho.db'
-});
-
-const shiyoushoConnect = async () => {
-
-    try {
-            
-        await sequelizeShiyousho.authenticate();
-        console.log('Shiyousho connection has been established successfully.');
-        
-    } catch (e) {
-        throw new Error(e)
-    }
-
-    return sequelizeShiyousho
-}
-
 export {
-    shiyoushoConnect,
-    sequelizeShiyousho,
     connectDB
 }

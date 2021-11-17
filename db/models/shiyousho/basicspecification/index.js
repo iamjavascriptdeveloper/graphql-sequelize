@@ -1,13 +1,8 @@
 import { DataTypes, Model } from 'sequelize';
-import { Sequelize } from 'sequelize';
+import { shiyousho } from '../../../../config';
 
 import BasicSpecificationValue from './basicspecificationvalue';
 import BasicSpecificationCategory from './basicspecificationcategory';
-
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: './db/Shiyousho.db'
-});
 
 class BasicSpecification extends Model{}
 
@@ -25,15 +20,16 @@ BasicSpecification.init({
     },
     CategoryId: {
         type: DataTypes.INTEGER,
+    },
+    EntryTypeId: {
+        type: DataTypes.INTEGER,
     }
 }, {
     // Other model options go here
     tableName: 'BasicSpecifications',
     timestamps: false,
-    sequelize,
+    sequelize: shiyousho,
 });
-
-
 
 BasicSpecification.hasMany( BasicSpecificationValue, {
     constraints: false,

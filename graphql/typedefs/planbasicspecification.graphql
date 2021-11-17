@@ -1,1 +1,8 @@
 # Types 
+type PlanBasicSpecification {
+    #Interface Required
+    ConstructionCode: String!
+    PlanNo: String!
+
+    BasicSpecification: BasicSpecification
+}

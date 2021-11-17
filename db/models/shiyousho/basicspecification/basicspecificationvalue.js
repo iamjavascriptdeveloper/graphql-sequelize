@@ -1,10 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import { Sequelize } from 'sequelize';
-
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: './db/Shiyousho.db'
-});
+import { shiyousho } from '../../../../config';
 
 class BasicSpecificationValue extends Model{}
 
@@ -28,7 +23,7 @@ BasicSpecificationValue.init({
     // Other model options go here
     tableName: 'BasicSpecificationValues',
     timestamps: false,
-    sequelize,
+    sequelize: shiyousho
 });
 
 export default BasicSpecificationValue

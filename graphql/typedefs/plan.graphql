@@ -7,5 +7,6 @@ type Plan implements PlanId{
     ConstructionCode: String!
     PlanNo: String!
 
-    BasicSpecification: BasicSpecification
+    PlanBasicSpecifications: [PlanBasicSpecification]
+    
 }
