@@ -1,0 +1,7 @@
+# Types
+type RoomCategory {
+    Id: ID!
+    JapaneseName: String!
+    EnglishName: String!
+
+}

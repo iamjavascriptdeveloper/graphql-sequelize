@@ -1,0 +1,21 @@
+# Types 
+"""
+    Room Specifications
+"""
+type Room {
+    "Unique ID"
+    Id: ID!
+
+    "Room Name in Japaneses"
+    JapaneseName: String!
+
+    "Room Name in English"
+    EnglishName: String!
+
+    "Category of Room"
+    RoomCategory: RoomCategory
+
+    "Room Height"
+    RoomHeight: [RoomHeight]
+
+}

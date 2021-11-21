@@ -9,4 +9,7 @@ type Query{
 
     BasicSpecification: BasicSpecification
     BasicSpecifications: [BasicSpecification]
+
+    Room: Room
+    Rooms:[Room]
 }

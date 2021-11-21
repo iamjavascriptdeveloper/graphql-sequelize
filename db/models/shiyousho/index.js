@@ -5,3 +5,10 @@ export {
     BasicSpecificationValue, 
     BasicSpecificationCategory 
 } from './basicspecification';
+
+// Room
+export {
+    Room,
+    RoomCategory,
+    RoomHeight
+} from './room';

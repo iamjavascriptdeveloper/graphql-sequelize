@@ -1,10 +1,11 @@
 import { planQueries } from './plan';
-import { basicSpecificationQueries } from './shiyousho';
+import { shiyoushoQueries } from './shiyousho';
 
+// main queries
 const resolvers = {
   Query: {
     ...planQueries,
-    ...basicSpecificationQueries,
+    ...shiyoushoQueries,
   }
 };
 

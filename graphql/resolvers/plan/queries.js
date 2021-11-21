@@ -1,4 +1,4 @@
-import { planModel }from "../../../db/models";
+import { planModel } from "../../../db/models";
 import { BasicSpecification, BasicSpecificationValue, BasicSpecificationCategory } from "../../../db/models/shiyousho";
 
 const planQueries = {
@@ -12,6 +12,7 @@ const planQueries = {
 
     let PlanBasicSpecifications = await PlanBasicSpecification.findAll()
     let basics = [];
+
     for (let basic of PlanBasicSpecifications){
       console.log( basic )
       
@@ -28,9 +29,7 @@ const planQueries = {
         where: { id: basic.BasicSpecificationId } }) )
     }
   
-    
 
-    console.log( basics )
 
     return plan
       

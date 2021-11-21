@@ -1,1 +1,1 @@
-export { default as basicSpecificationQueries } from './queries';
+export { default as shiyoushoQueries } from './queries';
