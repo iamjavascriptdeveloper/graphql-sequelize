@@ -1,6 +1,9 @@
 import {
     Room, 
-    RoomCategory
+    RoomCategory,
+    RoomHeight,
+    RoomProduct,
+    RoomProductDetail
   } from "../../../../db/models/shiyousho"
 
 const roomQueries = {
@@ -9,6 +12,21 @@ const roomQueries = {
           include: [
             {
               model: RoomCategory
+            },
+            {
+              model: RoomHeight,
+              include: [
+                {
+                  model: RoomProduct,
+                  include: [
+                    {
+                      model: RoomProductDetail
+                      
+                    }
+                  ],
+            
+                }
+              ]
             }
           ]
         })

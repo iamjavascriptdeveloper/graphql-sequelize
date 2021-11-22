@@ -3,6 +3,7 @@
     Room Specifications
 """
 type Room {
+    
     "Unique ID"
     Id: ID!
 
@@ -13,9 +14,9 @@ type Room {
     EnglishName: String!
 
     "Category of Room"
-    RoomCategory: RoomCategory
+    RoomCategory: RoomCategory!
 
     "Room Height"
-    RoomHeight: [RoomHeight]
+    RoomHeights: [RoomHeight!]!
 
 }

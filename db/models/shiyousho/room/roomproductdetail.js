@@ -1,39 +1,34 @@
 import { DataTypes, Model } from 'sequelize';
 import { shiyousho } from '../../../../config';
 
-class RoomHeight extends Model{}
+class RoomProductDetail extends Model{}
 
-RoomHeight.init({
+RoomProductDetail.init({
     // Model attributes are defined here
-    RoomId: {
+    TypeId: {
         type:  DataTypes.INTEGER,
         primaryKey:true,
         allowNull: false
     },
-    MethodTypeId: {
-        type:  DataTypes.INTEGER,
+    ProductCode: {
+        type:  DataTypes.TEXT,
         primaryKey:true,
         allowNull: false
     },
-    Kanabakari:{
-        type:  DataTypes.INTEGER,
+    Hinban:{
+        type:  DataTypes.TEXT,
         primaryKey:true,
         allowNull: false
     },
-    Floor: {
-        type:  DataTypes.INTEGER,
-        primaryKey:true,
-        allowNull: false
-    },
-    Height: {
-        type:  DataTypes.REAL,    
+    SortNo: {
+        type:  DataTypes.INTEGER,    
         allowNull: false
     }
 }, {
     // Other model options go here
-    tableName: 'RoomHeights',
+    tableName: 'RoomProductDetails',
     timestamps: false,
     sequelize: shiyousho,
 });
 
-export default RoomHeight
+export default RoomProductDetail

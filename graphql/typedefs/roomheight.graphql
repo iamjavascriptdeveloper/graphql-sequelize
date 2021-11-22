@@ -1,9 +1,11 @@
 # Types
+
 type RoomHeight {
     RoomId: ID!
     MethodTypeId: Int!
     Kanabakari: Int!
     Floor: Int!
-    Height: Float!
-    
+    Height: Float!   
+
+    RoomProducts: [RoomProduct]
 }

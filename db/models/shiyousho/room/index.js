@@ -3,6 +3,8 @@ import { shiyousho } from '../../../../config';
 
 import RoomCategory from './roomcategory';
 import RoomHeight from './roomheight';
+import RoomProduct from './roomproduct';
+import RoomProductDetail from './roomproductdetail';
 
 class Room extends Model{}
 
@@ -95,20 +97,46 @@ RoomCategory.belongsTo( Room, {
     sourceKey: 'CategoryId'
 })
 
-// Room.hasMany( RoomHeight, {
-//     constraints: false,    
-//     foreignKey: 'Id',
-//     sourceKey: 'RoomId'
-// })
+Room.hasMany( RoomHeight, {
+    constraints: false,    
+    foreignKey: 'RoomId',
+    sourceKey: 'Id'
+})
 
-// RoomHeight.belongsTo( Room, {
-//     constraints: false,
-//     foreignKey: 'Id',
-//     sourceKey: 'RoomId'
-// })
+RoomHeight.belongsTo( Room, {
+    constraints: false,
+    foreignKey: 'RoomId',
+    sourceKey: 'Id'
+})
+
+RoomHeight.hasMany( RoomProduct, {
+    constraints: false,    
+    foreignKey: 'TypeId',
+    sourceKey: 'MethodTypeId'  
+})
+
+RoomProduct.belongsTo( RoomHeight, {
+    constraints: false,    
+    foreignKey: 'TypeId',
+    sourceKey: 'MethodTypeId'     
+})
+
+RoomProduct.hasMany( RoomProductDetail, {
+    constraints: false, 
+    foreignKey: 'TypeId',
+    sourceKey: 'TypeId'     
+})
+
+RoomProductDetail.belongsTo( RoomProduct, {
+    constraints: false,    
+    foreignKey: 'TypeId',
+    sourceKey: 'TypeId'      
+})
 
 export {
     Room,
     RoomCategory,
-    RoomHeight
+    RoomHeight,
+    RoomProduct,
+    RoomProductDetail
 }

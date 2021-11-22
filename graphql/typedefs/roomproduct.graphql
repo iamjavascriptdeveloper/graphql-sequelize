@@ -1,0 +1,10 @@
+# Types
+type RoomProduct {
+    TypeId: Int!
+    ProductCode: String!
+    JapaneseName: String!
+    EnglishName: String!
+    SortNo: Int!
+
+    RoomProductDetails: [RoomProductDetail]
+}

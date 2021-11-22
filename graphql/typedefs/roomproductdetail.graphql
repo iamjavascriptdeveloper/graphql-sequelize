@@ -1,0 +1,7 @@
+# Types
+type RoomProductDetail {
+    TypeId: Int!
+    ProductCode: String!
+    Hinban: String!
+    SortNo: Int!
+}

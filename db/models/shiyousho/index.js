@@ -10,5 +10,7 @@ export {
 export {
     Room,
     RoomCategory,
-    RoomHeight
+    RoomHeight,
+    RoomProduct,
+    RoomProductDetail
 } from './room';
